@@ -22,12 +22,13 @@
             Integer i, j;
             Integer ancho = Integer.parseInt(request.getParameter("ancho"));
             Integer alto = Integer.parseInt(request.getParameter("alto"));
-            if (ancho == null || ancho > 50 || ancho < 1 || alto == null || alto > 50 || alto < 1) {
+            Integer max=30;
+            if (ancho == null || ancho > max || ancho < 1 || alto == null || alto > max || alto < 1) {
         %>        
         <div class="p-5 mb-4">
             <div class="text-center">
                 <h6 class="text-muted text-monospace">Datos alto y ancho erroneos:</h6>
-                <h6 class="text-muted text-monospace">Por favor introduce valores de ancho y alto entre 1 y 50</h6>
+                <h6 class="text-muted text-monospace">Por favor introduce valores de ancho y alto entre 1 y <%=max%></h6>
             </div>
         </div>       
         <%  } else {  %>        
